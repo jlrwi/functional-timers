@@ -2,6 +2,10 @@
     fudge, node
 */
 
+//MD # ESFunctions/p
+//MD Curried functions for nodejs timers/p
+//MD ## Functions/p
+
 const options_parse = function (options) {
 
 // Only supplied args to callback
@@ -26,6 +30,7 @@ const options_parse = function (options) {
     return {};
 };
 
+//MD     set_immediate(callback)/p
 const set_immediate = function (callback) {
     const timer_ref = setImmediate(callback);
 
@@ -34,6 +39,7 @@ const set_immediate = function (callback) {
     };
 };
 
+//MD     set_interval(options)(callback)/p
 const set_interval = function (options) {
     return function (callback) {
         const parsed_options = options_parse(options);
@@ -54,6 +60,7 @@ const set_interval = function (options) {
     };
 };
 
+//MD     set_timeout(options)(callback)/p
 const set_timeout = function (options) {
     return function (callback) {
         const parsed_options = options_parse(options);
@@ -73,6 +80,12 @@ const set_timeout = function (options) {
         };
     };
 };
+
+//MD ## Options/p
+//MD The options parameter may be any of the following:/p
+//MD - A numeric delay value/p
+//MD - An array of arguments to be passed to the callback/p
+//MD - An object with delay and/or args properties/p
 
 export {
     set_immediate,
