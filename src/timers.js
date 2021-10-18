@@ -3,7 +3,7 @@
 */
 
 //MD # functional-timers/p
-//MD Curried functions for nodejs timers/p
+//MD Curried functions for nodejs timers. Each returns a cancel function./p
 //MD ## Functions/p
 
 const options_parse = function (options) {
@@ -88,6 +88,9 @@ const set_timeout = function (options) {
 //MD - A numeric delay value/p
 //MD - An array of arguments to be passed to the callback/p
 //MD - An object with delay and/or args properties/p
+//MD ## Example/p
+//MD     const cancel = set_interval(1000)(callback_function);/p
+//MD     cancel();/p
 
 export {
     set_immediate,
