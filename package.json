@@ -1,5 +1,5 @@
 {
-  "name": "functional-timers",
+  "name": "@jlrwi/functional-timers",
   "version": "1.0.0",
   "description": "Functional versions of nodejs timers",
   "main": "index.js",

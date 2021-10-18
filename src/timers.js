@@ -87,7 +87,7 @@ const set_timeout = function (options) {
 //MD The options parameter may be any of the following:/p
 //MD - A numeric delay value/p
 //MD - An array of arguments to be passed to the callback/p
-//MD - An object with delay and/or args properties/p
+//MD - An object with delay (numeric) and/or args (array) properties/p
 //MD ## Example/p
 //MD     const cancel = set_interval(1000)(callback_function);/p
 //MD     cancel();/p
