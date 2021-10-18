@@ -1,4 +1,4 @@
-# ESFunctions 
+# functional-timers 
 Curried functions for nodejs timers 
 ## Functions 
     set_immediate(...args)(callback) 

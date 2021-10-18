@@ -2,7 +2,7 @@
     fudge, node
 */
 
-//MD # ESFunctions/p
+//MD # functional-timers/p
 //MD Curried functions for nodejs timers/p
 //MD ## Functions/p
 
