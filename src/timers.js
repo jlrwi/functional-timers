@@ -30,12 +30,14 @@ const options_parse = function (options) {
     return {};
 };
 
-//MD     set_immediate(callback)/p
-const set_immediate = function (callback) {
-    const timer_ref = setImmediate(callback);
+//MD     set_immediate(...args)(callback)/p
+const set_immediate = function (...args) {
+    return function (callback) {
+        const timer_ref = setImmediate(callback, ...args);
 
-    return function clear_immediate() {
-        clearImmediate(timer_ref);
+        return function clear_immediate() {
+            clearImmediate(timer_ref);
+        };
     };
 };
 

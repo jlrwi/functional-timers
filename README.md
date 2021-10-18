@@ -1,7 +1,7 @@
 # ESFunctions 
 Curried functions for nodejs timers 
 ## Functions 
-    set_immediate(callback) 
+    set_immediate(...args)(callback) 
     set_interval(options)(callback) 
     set_timeout(options)(callback) 
 ## Options 
